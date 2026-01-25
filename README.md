@@ -43,14 +43,13 @@ This project was bootstrapped using **React + Vite**, which provides a **fast an
 ---
 
 ## 📁 Project Structure
-
 src/
- ├─ components/
- │   ├─ Search.jsx        # Search bar with debounced input
- │   ├─ MovieCard.jsx     # Card component to display movie info
- ├─ data/
- │   ├─ movieData.js      # Sample movie data (optional, for testing)
- ├─ App.jsx               # Main app component, renders Search & MovieCards
- ├─ index.jsx             # Entry point
- ├─ styles/
- │   ├─ App.css           # Basic styling or Tailwind imports
+├─ components/
+│ ├─ Search.jsx # Debounced search input
+│ ├─ MovieCard.jsx # Card component to display movie info
+├─ data/
+│ ├─ movieData.js # Sample static movie data for testing
+├─ styles/
+│ ├─ App.css # Basic styling / Tailwind imports
+├─ App.jsx # Main app component, renders Search & MovieCards
+├─ index.jsx # React entry point
