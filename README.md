@@ -1,16 +1,56 @@
-# React + Vite
+# React Movies App 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **React application** that allows users to search, explore, and view movies dynamically. Built for practice in React, API integration, and frontend development.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## React Compiler
+- **Search Movies**: Search movies by title in real-time.
+- **Movie Details**: View release date, rating, language, and overview.
+- **Responsive Design**: Works on both desktop and mobile devices.
+- **Debounced Search**: Optimized search to reduce unnecessary API calls.
+- **Dynamic Rating Display**: Ratings formatted to one decimal place.
+- **Grid Layout**: Clean card-based layout for movies.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React 18 + Vite
+- **API**: [The Movie Database (TMDB) API](https://www.themoviedb.org/documentation/api)
+- **Styling**: Tailwind CSS / CSS modules
+- **State Management**: React hooks (`useState`, `useEffect`)
+- **Performance Optimization**: Debounced search to reduce API calls
+
+---
+
+## ⚡ Development Setup (Vite + React)
+
+This project was bootstrapped using **React + Vite**, which provides a **fast and minimal setup** for React development:
+
+- **HMR (Hot Module Replacement)** for instant updates during development
+- Pre-configured **ESLint rules** for code quality
+
+### Plugins Available:
+
+- `@vitejs/plugin-react` → Uses Babel (or oxc with Rollup) for Fast Refresh  
+- `@vitejs/plugin-react-swc` → Uses SWC for Fast Refresh  
+
+> **Note:** The React Compiler is not enabled by default because it can impact development and build performance.  
+> For production, it is recommended to use **TypeScript with type-aware linting**.
+
+---
+
+## 📁 Project Structure
+
+src/
+ ├─ components/
+ │   ├─ Search.jsx        # Search bar with debounced input
+ │   ├─ MovieCard.jsx     # Card component to display movie info
+ ├─ data/
+ │   ├─ movieData.js      # Sample movie data (optional, for testing)
+ ├─ App.jsx               # Main app component, renders Search & MovieCards
+ ├─ index.jsx             # Entry point
+ ├─ styles/
+ │   ├─ App.css           # Basic styling or Tailwind imports
