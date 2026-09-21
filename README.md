@@ -1,55 +1,203 @@
-# React Movies App 
+# Movie Explorer – React Application
 
-A modern **React application** that allows users to search, explore, and view movies dynamically. Built for practice in React, API integration, and frontend development.
+A responsive movie discovery application built with React.js and the TMDB REST API. The application allows users to search for movies, explore movie information, and view movie details through a responsive and user-friendly interface.
 
----
+This project demonstrates practical frontend development skills including React component development, REST API integration, asynchronous data handling, responsive UI development, reusable components, and frontend performance optimization.
 
 ## Features
 
-- **Search Movies**: Search movies by title in real-time.
-- **Movie Details**: View release date, rating, language, and overview.
-- **Responsive Design**: Works on both desktop and mobile devices.
-- **Debounced Search**: Optimized search to reduce unnecessary API calls.
-- **Dynamic Rating Display**: Ratings formatted to one decimal place.
-- **Grid Layout**: Clean card-based layout for movies.
+* Search for movies using the TMDB REST API
+* Display movie information including title, poster, rating, and overview
+* Debounced search to reduce unnecessary API requests
+* Responsive movie grid for different screen sizes
+* Reusable React components
+* Dynamic movie ratings
+* API configuration using environment variables
+* Loading and API response handling
 
----
+## Technology Stack
 
-## Tech Stack
+| Technology        | Purpose                          |
+| ----------------- | -------------------------------- |
+| React.js          | Frontend application development |
+| JavaScript (ES6+) | Application logic                |
+| Vite              | Development and build tooling    |
+| TMDB REST API     | Movie data and search            |
+| HTML5             | Application structure            |
+| CSS3              | Styling and responsive design    |
+| React Hooks       | State and component logic        |
+| Git               | Version control                  |
+| GitHub            | Source code management           |
 
-- **Frontend**: React 18 + Vite
-- **API**: [The Movie Database (TMDB) API](https://www.themoviedb.org/documentation/api)
-- **Styling**: Tailwind CSS / CSS modules
-- **State Management**: React hooks (`useState`, `useEffect`)
-- **Performance Optimization**: Debounced search to reduce API calls
+## Application Flow
 
----
-
-## Development Setup (Vite + React)
-
-This project was bootstrapped using **React + Vite**, which provides a **fast and minimal setup** for React development:
-
-- **HMR (Hot Module Replacement)** for instant updates during development
-- Pre-configured **ESLint rules** for code quality
-
-### Plugins Available:
-
-- `@vitejs/plugin-react` → Uses Babel (or oxc with Rollup) for Fast Refresh  
-- `@vitejs/plugin-react-swc` → Uses SWC for Fast Refresh  
-
-> **Note:** The React Compiler is not enabled by default because it can impact development and build performance.  
-> For production, it is recommended to use **TypeScript with type-aware linting**.
-
----
+```text
+User
+  |
+  v
+React Application
+  |
+  +-- Search Movies
+  |
+  +-- Send API Request
+  |
+  v
+TMDB REST API
+  |
+  v
+Movie Data
+  |
+  +-- Movie Cards
+  +-- Ratings
+  +-- Movie Details
+```
 
 ## Project Structure
-src/
-├─ components/
-│ ├─ Search.jsx # Debounced search input
-│ ├─ MovieCard.jsx # Card component to display movie info
-├─ data/
-│ ├─ movieData.js # Sample static movie data for testing
-├─ styles/
-│ ├─ App.css # Basic styling / Tailwind imports
-├─ App.jsx # Main app component, renders Search & MovieCards
-├─ index.jsx # React entry point
+
+```text
+my-react-movies-app/
+|
++-- public/
+|
++-- src/
+|   |
+|   +-- assets/
+|   |
+|   +-- components/
+|   |
+|   +-- App.jsx
+|   +-- App.css
+|   +-- index.css
+|   +-- main.jsx
+|
++-- .gitignore
++-- index.html
++-- package.json
++-- package-lock.json
++-- vite.config.js
++-- README.md
+```
+
+## API Integration
+
+The application uses the TMDB REST API to retrieve movie information and search results.
+
+The API key is accessed through an environment variable:
+
+```text
+VITE_TMDB_API_KEY=your_api_key_here
+```
+
+The actual API key is stored locally in `.env.local` and is excluded from Git using `.gitignore`.
+
+Sensitive credentials such as API keys should not be committed to the repository.
+
+## Search Optimization
+
+The application uses debounced search to reduce unnecessary API requests while the user is typing.
+
+Instead of making an API request for every keystroke, the application waits for a short pause in user input before sending the request.
+
+This helps reduce unnecessary network traffic and provides a better search experience.
+
+## Responsive Design
+
+The application is designed to provide a consistent experience across different screen sizes.
+
+The interface supports:
+
+* Desktop
+* Tablet
+* Mobile
+
+## Local Development
+
+### Prerequisites
+
+Make sure the following are installed:
+
+* Node.js
+* npm
+* Git
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/Devikamedam/my-react-movies-app.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd my-react-movies-app
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Configure Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```text
+VITE_TMDB_API_KEY=your_api_key_here
+```
+
+Do not commit `.env.local` to GitHub.
+
+### Start the Development Server
+
+```bash
+npm run dev
+```
+
+Vite will provide the local development URL in the terminal.
+
+## Production Build
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+The production files will be generated in the `dist` directory.
+
+## Development Areas
+
+This project demonstrates experience with:
+
+* React.js
+* JavaScript ES6+
+* Component-based development
+* REST API integration
+* React Hooks
+* Asynchronous API calls
+* Debounced search
+* Responsive UI development
+* Environment variable management
+* Git and GitHub
+* Vite development and production builds
+
+## Future Improvements
+
+Possible future enhancements include:
+
+* Add pagination or infinite scrolling
+* Add movie genre filtering
+* Add favorites or watchlist functionality
+* Add automated unit and component testing
+* Add CI/CD pipeline
+* Deploy the application to AWS
+* Add application monitoring and logging
+
+## Author
+
+**Devika Medam**
+
+Frontend / Full-Stack Developer
+
+GitHub: https://github.com/Devikamedam
