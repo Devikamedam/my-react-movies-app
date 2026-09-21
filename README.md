@@ -193,11 +193,3 @@ Possible future enhancements include:
 * Add CI/CD pipeline
 * Deploy the application to AWS
 * Add application monitoring and logging
-
-## Author
-
-**Devika Medam**
-
-Frontend / Full-Stack Developer
-
-GitHub: https://github.com/Devikamedam
