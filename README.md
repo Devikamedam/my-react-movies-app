@@ -1,10 +1,10 @@
-# React Movies App 🎬
+# React Movies App 
 
 A modern **React application** that allows users to search, explore, and view movies dynamically. Built for practice in React, API integration, and frontend development.
 
 ---
 
-## 🌟 Features
+## Features
 
 - **Search Movies**: Search movies by title in real-time.
 - **Movie Details**: View release date, rating, language, and overview.
@@ -15,7 +15,7 @@ A modern **React application** that allows users to search, explore, and view mo
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Frontend**: React 18 + Vite
 - **API**: [The Movie Database (TMDB) API](https://www.themoviedb.org/documentation/api)
@@ -25,7 +25,7 @@ A modern **React application** that allows users to search, explore, and view mo
 
 ---
 
-## ⚡ Development Setup (Vite + React)
+## Development Setup (Vite + React)
 
 This project was bootstrapped using **React + Vite**, which provides a **fast and minimal setup** for React development:
 
@@ -42,7 +42,7 @@ This project was bootstrapped using **React + Vite**, which provides a **fast an
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 src/
 ├─ components/
 │ ├─ Search.jsx # Debounced search input
